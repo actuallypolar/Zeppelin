@@ -71,7 +71,7 @@ export const WarnCmd = modActionsCmd({
       const reply = await waitForButtonConfirm(
         msg.channel,
         { content: config.warn_notify_message.replace("{priorWarnings}", `${priorWarnAmount}`) },
-        { confirmText: "Yes", cancelText: "No", restrictToId: msg.member.id },
+        { confirmText: "Confirm", cancelText: "Cancel", restrictToId: msg.member.id },
       );
       if (!reply) {
         msg.channel.send(errorMessage("Warn cancelled by moderator"));

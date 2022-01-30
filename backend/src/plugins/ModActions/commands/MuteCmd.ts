@@ -57,7 +57,7 @@ export const MuteCmd = modActionsCmd({
         const reply = await waitForButtonConfirm(
           msg.channel,
           { content: "User not found on the server, forcemute instead?" },
-          { confirmText: "Yes", cancelText: "No", restrictToId: msg.member.id },
+          { confirmText: "Confirm", cancelText: "Cancel", restrictToId: msg.member.id },
         );
 
         if (!reply) {

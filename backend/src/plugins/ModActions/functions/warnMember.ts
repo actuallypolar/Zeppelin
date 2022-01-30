@@ -44,7 +44,7 @@ export async function warnMember(
       const reply = await waitForButtonConfirm(
         warnOptions.retryPromptChannel,
         { content: "Failed to message the user. Log the warning anyway?" },
-        { confirmText: "Yes", cancelText: "No", restrictToId: warnOptions.caseArgs?.modId },
+        { confirmText: "Confirm", cancelText: "Cancel", restrictToId: warnOptions.caseArgs?.modId },
       );
 
       if (!reply) {

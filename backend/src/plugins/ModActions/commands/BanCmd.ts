@@ -83,7 +83,7 @@ export const BanCmd = modActionsCmd({
         const reply = await waitForButtonConfirm(
           msg.channel,
           { content: "Failed to message the user. Log the warning anyway?" },
-          { confirmText: "Yes", cancelText: "No", restrictToId: msg.member.id },
+          { confirmText: "Confirm", cancelText: "Cancel", restrictToId: msg.member.id },
         );
         if (!reply) {
           sendErrorMessage(pluginData, msg.channel, "User already banned, update cancelled by moderator");
@@ -143,7 +143,7 @@ export const BanCmd = modActionsCmd({
         const reply = await waitForButtonConfirm(
           msg.channel,
           { content: "User not on server, forceban instead?" },
-          { confirmText: "Yes", cancelText: "No", restrictToId: msg.member.id },
+          { confirmText: "Confirm", cancelText: "Cancel", restrictToId: msg.member.id },
         );
         if (!reply) {
           sendErrorMessage(pluginData, msg.channel, "User not on server, ban cancelled by moderator");

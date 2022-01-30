@@ -64,7 +64,7 @@ export const UnmuteCmd = modActionsCmd({
         const reply = await waitForButtonConfirm(
           msg.channel,
           { content: "User not on server, forceunmute instead?" },
-          { confirmText: "Yes", cancelText: "No", restrictToId: msg.member.id },
+          { confirmText: "Confirm", cancelText: "Cancel", restrictToId: msg.member.id },
         );
 
         if (!reply) {
